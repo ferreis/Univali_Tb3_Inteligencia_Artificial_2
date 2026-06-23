@@ -47,9 +47,15 @@ echo "Criando arquivo $ARQUIVO_ACESSO..."
 cat > "$ARQUIVO_ACESSO" <<EOF
 # Acesso ao ambiente Jupyter
 
+Projeto:
+
+\`\`\`text
+Univali TB3 - Inteligência Artificial 2
+\`\`\`
+
 Este projeto usa uma venv local chamada:
 
-\`\`\`bash
+\`\`\`text
 $NOME_VENV
 \`\`\`
 
@@ -61,48 +67,127 @@ $NOME_EXIBICAO_KERNEL
 
 ---
 
-## Ativar a venv
+## O que foi criado pelo setup
 
-No terminal, dentro da pasta do projeto:
+Depois de rodar o script \`setup_jupyter.sh\`, serão criados:
 
-\`\`\`bash
-source $NOME_VENV/bin/activate
+\`\`\`text
+.venv
+Acesso.md
 \`\`\`
 
 ---
 
-## Parar / sair da venv
+# Linux/macOS
 
-Para sair da venv:
+## Ativar a venv
+
+\`\`\`bash
+source .venv/bin/activate
+\`\`\`
+
+## Sair/parar a venv
 
 \`\`\`bash
 deactivate
 \`\`\`
 
----
-
-## Abrir o Jupyter pelo navegador
-
-Com a venv ativada, rode:
+## Abrir o Jupyter
 
 \`\`\`bash
 jupyter notebook
 \`\`\`
 
-Depois acesse pelo navegador usando o link que aparecer no terminal.
+---
 
-Normalmente será algo parecido com:
+# Windows com Git Bash
+
+## Ativar a venv
+
+\`\`\`bash
+source .venv/Scripts/activate
+\`\`\`
+
+## Sair/parar a venv
+
+\`\`\`bash
+deactivate
+\`\`\`
+
+## Abrir o Jupyter
+
+\`\`\`bash
+jupyter notebook
+\`\`\`
+
+---
+
+# Windows com PowerShell
+
+## Ativar a venv
+
+\`\`\`powershell
+.venv\\Scripts\\Activate.ps1
+\`\`\`
+
+## Sair/parar a venv
+
+\`\`\`powershell
+deactivate
+\`\`\`
+
+## Abrir o Jupyter
+
+\`\`\`powershell
+jupyter notebook
+\`\`\`
+
+---
+
+# Windows com CMD
+
+## Ativar a venv
+
+\`\`\`cmd
+.venv\\Scripts\\activate.bat
+\`\`\`
+
+## Sair/parar a venv
+
+\`\`\`cmd
+deactivate
+\`\`\`
+
+## Abrir o Jupyter
+
+\`\`\`cmd
+jupyter notebook
+\`\`\`
+
+---
+
+# Acessar o Jupyter no navegador
+
+Depois de rodar:
+
+\`\`\`bash
+jupyter notebook
+\`\`\`
+
+O terminal vai mostrar um link parecido com:
 
 \`\`\`text
 http://localhost:8888/tree
 \`\`\`
 
+Abra esse link no navegador.
+
 ---
 
-## Usar no VS Code
+# Usar no VS Code
 
 1. Abra um arquivo \`.ipynb\`
-2. Clique em selecionar kernel
+2. Clique em **Select Kernel**
 3. Escolha:
 
 \`\`\`text
@@ -111,15 +196,15 @@ $NOME_EXIBICAO_KERNEL
 
 ---
 
-## Instalar dependências dentro do notebook
+# Instalar dependências dentro do notebook
 
-As dependências da aplicação podem ser instaladas direto em uma célula do notebook:
+As dependências da atividade podem ser instaladas direto em uma célula do notebook:
 
 \`\`\`python
 %pip install pandas numpy openpyxl matplotlib
 \`\`\`
 
-Para FaceNet, um exemplo seria:
+Exemplo para FaceNet:
 
 \`\`\`python
 %pip install facenet-pytorch torch torchvision pillow opencv-python
@@ -127,11 +212,11 @@ Para FaceNet, um exemplo seria:
 
 ---
 
-## Observação
+# Observação
 
-A venv guarda o ambiente Python.
+A venv guarda os pacotes Python do projeto.
 
-O kernel permite que o Jupyter ou o VS Code usem essa venv nos notebooks.
+O kernel permite que o Jupyter e o VS Code usem essa venv nos notebooks.
 EOF
 
 echo "======================================"
@@ -141,7 +226,7 @@ echo ""
 echo "Arquivo criado:"
 echo "$ARQUIVO_ACESSO"
 echo ""
-echo "Para ativar manualmente:"
+echo "Para ativar manualmente no Linux/macOS:"
 echo "source $NOME_VENV/bin/activate"
 echo ""
 echo "Para abrir o Jupyter no navegador:"
