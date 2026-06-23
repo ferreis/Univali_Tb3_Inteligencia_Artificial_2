@@ -1,0 +1,157 @@
+# ======================================
+# Python / Venv
+# ======================================
+
+.venv/
+venv/
+env/
+ENV/
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.pyo
+*.pyd
+
+
+# ======================================
+# Jupyter Notebook
+# ======================================
+
+.ipynb_checkpoints/
+
+# Se o notebook gerar cache local
+.jupyter/
+.local/
+
+
+# ======================================
+# Arquivos gerados pelo script
+# ======================================
+
+Acesso.md
+
+
+# ======================================
+# Agentes / arquivos locais de IA
+# ======================================
+
+agents/
+agent/
+agentes/
+agente/
+
+.ai/
+.ia/
+.openai/
+.codex/
+.continue/
+.cursor/
+.claude/
+.gemini/
+.aider/
+.windsurf/
+
+*.agent
+*.agents
+*.agent.json
+*.agents.json
+
+
+# ======================================
+# Dados, datasets e saídas pesadas
+# ======================================
+
+data/
+dataset/
+datasets/
+modelos/
+models/
+weights/
+checkpoints/
+
+Input/*
+Output/*
+
+!Input/.keep
+!Output/.keep
+
+*.csv
+*.xlsx
+*.xls
+*.jsonl
+*.parquet
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+
+
+# ======================================
+# Imagens e vídeos usados/testados localmente
+# ======================================
+
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+*.tiff
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+
+# ======================================
+# Logs
+# ======================================
+
+*.log
+logs/
+
+
+# ======================================
+# Sistema operacional
+# ======================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# ======================================
+# VS Code
+# ======================================
+
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
+# Mantém recomendações de extensões, se você criar
+!.vscode/extensions.json
+
+
+# ======================================
+# Variáveis de ambiente / segredos
+# ======================================
+
+.env
+.env.*
+!.env.example
+
+
+# ======================================
+# Cache de ferramentas
+# ======================================
+
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
