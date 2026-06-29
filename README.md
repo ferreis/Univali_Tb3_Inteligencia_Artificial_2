@@ -27,6 +27,59 @@ O script `setup_jupyter.sh` faz estas etapas:
 
 Antes de rodar o script, é necessário ter o Python instalado.
 
+---
+
+# Extensões necessárias no VS Code
+
+Para abrir e executar o notebook no VS Code, instale estas extensões:
+
+| Extensão | ID | Para que serve |
+|---|---|---|
+| Python | `ms-python.python` | Permite usar Python, selecionar interpretador e rodar scripts. |
+| Jupyter | `ms-toolsai.jupyter` | Permite abrir e executar arquivos `.ipynb`. |
+| Jupyter Notebook Renderers | `ms-toolsai.jupyter-renderers` | Melhora a renderização de saídas do notebook, como tabelas, gráficos e HTML. |
+| Pylance | `ms-python.vscode-pylance` | Melhora autocomplete, análise e leitura do código Python. |
+
+## Como instalar pelo VS Code
+
+1. Abra o VS Code.
+2. Pressione `Ctrl + Shift + X`.
+3. Pesquise pelo nome da extensão.
+4. Clique em **Install**.
+
+## Como instalar pelo terminal
+
+Se o comando `code` estiver disponível:
+
+```bash
+code --install-extension ms-python.python
+code --install-extension ms-toolsai.jupyter
+code --install-extension ms-toolsai.jupyter-renderers
+code --install-extension ms-python.vscode-pylance
+```
+
+## Extensão opcional para Windows com WSL
+
+Se for rodar o projeto pelo WSL no Windows, instale também:
+
+| Extensão | ID | Para que serve |
+|---|---|---|
+| WSL | `ms-vscode-remote.remote-wsl` | Permite abrir o projeto dentro do Linux do WSL pelo VS Code. |
+
+Instalação pelo terminal:
+
+```bash
+code --install-extension ms-vscode-remote.remote-wsl
+```
+
+Depois de instalar as extensões, selecione o kernel criado pelo script:
+
+```text
+.venv
+```
+
+No notebook, clique em **Select Kernel** e escolha o kernel da venv do projeto.
+
 ## Linux Ubuntu/Debian
 
 Instale com:
